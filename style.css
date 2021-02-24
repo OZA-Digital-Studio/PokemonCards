@@ -1,0 +1,341 @@
+/* General settings ---------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  color: #231f20;
+  background-image: url("./img1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button,
+#searchBtn {
+  min-width: 18rem;
+  height: 4rem;
+  background-image: linear-gradient(
+    to right,
+    #02aab0 0%,
+    #00cdac 51%,
+    #02aab0 100%
+  );
+  background-size: 200% auto;
+  border-radius: 20px;
+  border-color: transparent;
+  box-shadow: 0 0 20px #eee;
+  font-size: 1.3rem;
+  color: white;
+  text-transform: uppercase;
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+
+button:hover,
+#searchBtn:hover {
+  background-position: right center;
+  transform: scale(0.9);
+  transition-duration: 0.7s;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  padding-left: 10px;
+}
+
+/* Effects --------------------------------- */
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Classes and ID elements ----------------- */
+
+.active {
+  display: flex;
+}
+
+.arrow {
+  position: absolute;
+  color: white;
+  width: 7rem;
+  height: auto;
+  font-size: 7rem;
+  margin-left: -10%;
+  cursor: pointer;
+  text-decoration: none;
+  animation-name: fadeInEffect;
+  animation-duration: 1s;
+  transition-duration: 0.7s;
+}
+
+.arrow:hover {
+  color: rgba(35, 31, 32, 0.4);
+  transform: scale(0.9);
+  transition-duration: 0.7s;
+}
+
+.attack1,
+.attack2,
+.ability {
+  display: none;
+  justify-content: space-around;
+  align-content: stretch;
+}
+
+.attackCost1,
+.attackCost2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80px;
+}
+
+.attackDamage1,
+.attackDamage2,
+.weaknesses {
+  width: 40px;
+  font-size: 2rem;
+}
+
+.attackName1,
+.attackName2,
+.abilityName {
+  width: 200px !important;
+  height: 30px;
+  text-align: center;
+  background-color: rgba(247, 247, 0, 0.6);
+  border-radius: 15px;
+  font-size: 1.8rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.attackText1,
+.attackText2,
+.abilityText {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  padding: 0 2% 0 2%;
+}
+
+.card {
+  height: 20rem;
+  animation-name: fadeInEffect;
+  animation-duration: 3s;
+  transition-duration: 0.7s;
+}
+
+.cardFooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 15px 15px;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    #02aab0 0%,
+    #00cdac 51%,
+    #02aab0 100%
+  );
+  padding: 2% 5% 2% 5% !important;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.cardHeader {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px 15px 0 0;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to right,
+    #02aab0 0%,
+    #00cdac 51%,
+    #02aab0 100%
+  );
+  padding: 2% 2% 2% 2%;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.cardImg {
+  height: 41rem;
+  width: auto;
+  transition-duration: 1s;
+}
+
+.cardImg:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80rem;
+  font-size: 1.5rem;
+  animation-name: fadeInEffect;
+  animation-duration: 2s;
+  box-shadow: 1px 1px 8px rgba(35, 31, 32, 0.4);
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 15px;
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: space-around;
+}
+
+.cardName {
+  color: rgba(247, 247, 0);
+  font-size: 2.5rem;
+  text-shadow: -1px 1px 40px rgba(247, 247, 0, 0.8);
+  text-transform: uppercase;
+}
+
+.cardViewer {
+  display: none;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  justify-items: flex-start;
+  justify-content: left;
+  align-content: center;
+  gap: 5%;
+}
+
+.container {
+  margin: 5% 5% 5% 5%;
+}
+
+.errorMsg {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3.5rem !important;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2% 2% 2% 2%;
+  gap: 10px;
+}
+
+.flexCol > div {
+  flex: 1;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 2% 2% 2% 2%;
+}
+
+.label {
+  font-size: 2rem;
+  color: #eaeaea;
+}
+
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  row-gap: 15px;
+  align-content: center;
+  justify-content: space-around;
+  animation-name: fadeInEffect;
+  animation-duration: 2s;
+  color: white;
+  font-size: 2rem;
+}
+
+.cardsList {
+  width: 100%;
+  height: 100%;
+}
+
+#searchBar {
+  height: 40px;
+  width: 300px;
+  color: black;
+  border-radius: 15px;
+  border-color: transparent;
+}
+
+#searchBtn {
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 7px;
+  margin-left: 2%;
+  background-image: linear-gradient(
+    to right,
+    #f09819 0%,
+    #edde5d 51%,
+    #f09819 100%
+  );
+}
+
+.searchCard {
+  position: absolute;
+  margin-top: -50px;
+  display: flex;
+  width: 100%;
+  height: 30px;
+  justify-content: center;
+}
+
+.set {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.text {
+  margin: auto;
+  padding: 2% 0 2% 0;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  color: white;
+  font-size: 7rem;
+  animation-name: fadeInEffect;
+  animation-duration: 2s;
+  text-shadow: 1px 1px 8px rgba(35, 31, 32, 0.4);
+}

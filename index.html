@@ -1,0 +1,125 @@
+<!-- STRUCTURE --
+
+__Header__ Back-arrow + Page Title
+__Main____
+            Section 1: List of card names
+              Search bar 
+              Buttons per each card
+            
+            Section 2: Card information
+              Image of the selected card 
+              Information:
+                Header: Name + Supertype + Subtype + HP + Type
+                Text
+                Ability: Name + Text + Type
+                Attacks: Name+ Text + Cost + Damage
+                Weaknesses + Resistance + Retreat Cost
+                Evolution + Ancient Trait
+                Footer: Artist + (Series + Set + Set Code) + Card Nr
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Pokemon App _ Claudia Meneghesso</title>
+  </head>
+  <body>
+    <div class="header">
+      <a class="arrow">&#8249;</a>
+      <h1 class="title">POKEMON TGC CARDS v1</h1>
+    </div>
+    <main class="container">
+      <!-- Interface 1: List of cards -->
+      <section class="listContainer">
+        <!-- Search bar -->
+        <form class="searchCard">
+          <input
+            type="text"
+            name="searc-result"
+            id="searchBar"
+            placeholder="Search card"
+          />
+          <a id="searchBtn">Search</a>
+        </form>
+        <!-- List -->
+        <div class="cardsList"></div>
+      </section>
+
+      <!-- Interface 2: Card Info -->
+      <section class="cardViewer">
+        <div class="cardInfo">
+          <!-- Header -->
+          <div class="cardHeader">
+            <h2 class="cardName"></h2>
+            <div id="superSubtype"></div>
+            <div id="type"></div>
+          </div>
+
+          <div class="flexCol">
+            <!-- Text -->
+            <div class="text"></div>
+            <!-- Ability -->
+            <div>🤹 Ability:</div>
+            <div class="ability">
+              <h2 class="abilityName"></h2>
+              <div class="abilityText"></div>
+              <h3 class="abilityType"></h3>
+            </div>
+            <!-- Attacks -->
+            <div>💢 Attacks:</div>
+            <div class="attack1">
+              <h2 class="attackName1"></h2>
+              <div class="attackText1"></div>
+              <div class="attackCost1"></div>
+              <div class="attackDamage1"></div>
+            </div>
+            <div class="attack2">
+              <h2 class="attackName2"></h2>
+              <div class="attackText2"></div>
+              <div class="attackCost2"></div>
+              <div class="attackDamage2"></div>
+            </div>
+
+            <div class="flexRow">
+              <!-- Weaknesses -->
+              <div>🛑 Weaknesses: <span class="weaknesses"></span></div>
+              <!-- Resistance -->
+              <div>💪 Resistance: <span class="resistance"></span></div>
+              <!-- Retreat Cost -->
+              <div>💸 Retreat Cost: <span class="retreat"></span></div>
+            </div>
+
+            <div class="flexRow">
+              <!-- Evolution -->
+              <div id="evol"></div>
+              <!-- Ancient Trait -->
+              <div id="cardAncient"></div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="cardFooter">
+            <!-- Artist -->
+            <div id="cardArtist"></div>
+            <!-- Series + Set + Set Code -->
+            <div class="set">
+              <div id="series"></div>
+              <div id="set"></div>
+              <div id="code"></div>
+            </div>
+            <!-- Card Nr -->
+            <div id="cardNr"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="cardImg" src="" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
